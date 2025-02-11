@@ -1,0 +1,30 @@
+# dbt_project.yml
+
+name: 'blockchain_etl'
+profile: blockchain_etl
+version: '1.0.0'
+config-version: 2
+
+# Define where dbt should look for models
+models:
+  blockchain_etl:
+    crypto_data:
+      materialized: table # or 'view' depending on your need
+
+# Directory for your models
+model-paths:
+  - blockchain_etl/models
+
+# Directory for your tests, macros, and snapshots (optional)
+test-paths: []
+macro-paths: []
+snapshot-paths: []
+
+# Additional dbt settings
+target-path: "target"  # directory where dbt will store the results
+clean-targets:
+  - target
+  - dbt_modules
+
+# This is where dbt will look for your profile settings
+# profiles-dir: ~/.dbt

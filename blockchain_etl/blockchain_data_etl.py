@@ -22,3 +22,4 @@ except Exception as e:
 # Convert data into a dataframe
 df = pd.DataFrame(data)
 print(df.head())
+return df

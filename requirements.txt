@@ -2,3 +2,5 @@ requests
 pandas
 apache-airflow
 dbt
+psycopg2-binary
+sqlalchemy
